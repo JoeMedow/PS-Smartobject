@@ -1,0 +1,11 @@
+tell application "Adobe Photoshop CC 2017"
+	tell current document
+		set myName to name
+		set current layer to layer "Layer 1" of layer set "Group 1"
+		
+		set openSmartObject to "var idplacedLayerEditContents = stringIDToTypeID( \"placedLayerEditContents\" );\n    var desc33 = new ActionDescriptor();\nexecuteAction( idplacedLayerEditContents, desc33, DialogModes.NO );\r"
+		
+		do javascript openSmartObject
+		
+	end tell
+end tell
